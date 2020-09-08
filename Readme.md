@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
-* Студент: [Адель Закирова](https://up.htmlacademy.ru/htmlcss/29/user/1353597).
-* Наставник: `Неизвестно`.
+- Студент: [Адель Закирова](https://up.htmlacademy.ru/htmlcss/29/user/1353597).
+- Наставник: [Павел Позняк](https://htmlacademy.ru/profile/id907403).
 
 ---
 
