@@ -5,8 +5,8 @@
   font-style: normal;
   font-weight: 400;
   src: local("PT Sans"), local("PTSans-Regular"),
-    url("../fonts/pt-sans-v11-latin_cyrillic-regular.woff2") format("woff2"),
-    url("../fonts/pt-sans-v11-latin_cyrillic-regular.woff") format("woff");
+    url("../fonts/ptsans.woff2") format("woff2"),
+    url("../fonts/ptsans.woff") format("woff");
 }
 
 @font-face {
@@ -14,8 +14,8 @@
   font-style: normal;
   font-weight: 700;
   src: local("PT Sans Bold"), local("PTSans-Bold"),
-    url("../fonts/pt-sans-v11-latin_cyrillic-700.woff2") format("woff2"),
-    url("../fonts/pt-sans-v11-latin_cyrillic-700.woff") format("woff");
+    url("../fonts/ptsansbold.woff2") format("woff2"),
+    url("../fonts/ptsansbold.woff") format("woff");
 }
 
 /* Variables */
@@ -23,37 +23,43 @@
 :root {
   --basic-black: #000000;
   --basic-light-black: rgba(0, 0, 0, 0.3);
-  --basic-DimGray: #6a6a6a;
-  --basic-NightRider: #333333;
-  --basic-grey: #;
-  --basic-Seagull: #81b3d2;
-  --basic-light-Shakespeare: #669ec0;
-  --basic-Shakespeare: #5496bd;
+  --basic-dim-fray: #6a6a6a;
+  --basic-night-rider: #333333;
+  --basic-seagull: #81b3d2;
+  --basic-light-shakespeare: #669ec0;
+  --basic-shakespeare: #5496bd;
   --basic-white: #ffffff;
   --basic-extra-white: rgba(255, 255, 255, 0.9);
   --basic-light-white: rgba(255, 255, 255, 0.3);
-
-  --special-RomanCoffee: #766357;
-  --special-Saddle: #604e43;
-  --special-Paco: #503e33;
-  --special-WhiteSmoke: #f2f2f2;
-  --special-Whisper: #ebebeb;
+  --basic-grey: #888888;
+  --special-roman-coffee: #766357;
+  --special-saddle: #604e43;
+  --special-paco: #503e33;
+  --special-white-smoke: #f2f2f2;
+  --special-whisper: #ebebeb;
+  --spcial-black-russian-shadow: rgba(0, 1, 1, 0.2);
+  --font-main: "PT Sans", Arial, sans-serif;
 }
 
 /* Global */
 
 body {
-  min-width: 1200px;
+  min-width: 100%;
   margin: 0;
   padding: 0;
-  font-family: "PT Sans", Arial, sans-serif;
+  font-family: var(--font-main);
   font-size: 21px;
   line-height: 21px;
   font-weight: 700;
   color: var(--basic-black);
-  text-transform: uppercase;
-  text-align: center;
+  background-color: var(--special-white-smoke);
+}
+
+.page-wrapper {
+  width: 1200px;
+  margin: 0 auto;
   background-color: var(--basic-white);
+  box-shadow: 0px 5px 15px var(--spcial-black-russian-shadow);
 }
 
 a {
@@ -66,6 +72,11 @@ img {
 }
 
 /* Main navigation */
+
+.main-header {
+  text-transform: uppercase;
+  text-align: center;
+}
 
 .main-navigation {
   font-size: 14px;
@@ -87,7 +98,7 @@ img {
 }
 
 .site-navigation a:hover {
-  color: var(--basic-Seagull);
+  color: var(--basic-seagull);
 }
 
 .site-navigation a:focus {
@@ -96,6 +107,10 @@ img {
 
 /* Container*/
 
+.container {
+  text-transform: uppercase;
+  text-align: center;
+}
 /* Features */
 
 .features-title {
@@ -106,7 +121,7 @@ img {
 .features-desc {
   font-size: 14px;
   line-height: 26px;
-  color: var(--basic-NightRider);
+  color: var(--basic-night-rider);
   font-weight: 400;
 }
 
@@ -118,14 +133,14 @@ img {
 .text {
   font-size: 14px;
   line-height: 21px;
-  color: var(--basic-NightRider);
+  color: var(--basic-night-rider);
   font-weight: 400;
 }
 
 .features-city .text,
 .features-city h3 {
   color: var(--basic-white);
-  background-color: var(--basic-Seagull);
+  background-color: var(--basic-seagull);
 }
 
 .features-list {
@@ -146,7 +161,7 @@ img {
 .search-text {
   font-size: 14px;
   line-height: 24px;
-  color: var(--basic-NightRider);
+  color: var(--basic-night-rider);
   font-weight: 400;
 }
 
@@ -158,29 +173,29 @@ img {
   text-align: center;
   color: var(--basic-white);
   vertical-align: middle;
-  background-color: var(--special-RomanCoffee);
+  background-color: var(--special-roman-coffee);
   border: none;
 }
 
 .search .button {
-  background-color: var(--basic-Seagull);
+  background-color: var(--basic-seagull);
 }
 
 .button:hover {
-  background-color: var(--special-Saddle);
+  background-color: var(--special-saddle);
 }
 
 .button:focus {
-  background-color: var(--special-Paco);
+  background-color: var(--special-paco);
   color: var(--basic-light-white);
 }
 
 .search-button:hover {
-  background-color: var(--basic-light-Shakespeare);
+  background-color: var(--basic-light-shakespeare);
 }
 
 .search-button:focus {
-  background-color: var(--basic-Shakespeare);
+  background-color: var(--basic-shakespeare);
   color: var(--basic-light-white);
 }
 
@@ -189,6 +204,8 @@ img {
 .main-footer {
   color: var(--basic-black);
   background-color: var(--basic-extra-white);
+  text-transform: uppercase;
+  text-align: center;
 }
 
 /* Contacts */
@@ -222,4 +239,11 @@ img {
 
 .copyright-text {
   font-weight: 400;
+}
+
+/* Search form */
+
+.search {
+  text-transform: uppercase;
+  text-align: center;
 }
