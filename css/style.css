@@ -23,7 +23,8 @@
 :root {
   --basic-black: #000000;
   --basic-light-black: rgba(0, 0, 0, 0.3);
-  --basic-dim-fray: #6a6a6a;
+  --basic-dim-gray-light: #6a6a6a;
+  --basic-dim-gray: #666666;
   --basic-night-rider: #333333;
   --basic-seagull: #81b3d2;
   --basic-light-shakespeare: #669ec0;
@@ -175,26 +176,27 @@ img {
   vertical-align: middle;
   background-color: var(--special-roman-coffee);
   border: none;
-}
-
-.search .button {
-  background-color: var(--basic-seagull);
+  cursor: pointer;
 }
 
 .button:hover {
   background-color: var(--special-saddle);
 }
 
-.button:focus {
+.button:active {
   background-color: var(--special-paco);
   color: var(--basic-light-white);
+}
+
+.search-button {
+  background-color: var(--basic-seagull);
 }
 
 .search-button:hover {
   background-color: var(--basic-light-shakespeare);
 }
 
-.search-button:focus {
+.search-button:active {
   background-color: var(--basic-shakespeare);
   color: var(--basic-light-white);
 }
@@ -246,4 +248,76 @@ img {
 .search {
   text-transform: uppercase;
   text-align: center;
+}
+
+/* Hotels */
+
+.caption {
+  font-size: 21px;
+  line-height: 26px;
+  color: var(--basic-black);
+}
+
+.sort {
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.sort-item {
+  list-style: none;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.sort-item a {
+  list-style: none;
+  color: var(--basic-light-black);
+  background-color: var(--basic-white);
+  border-bottom: 1px dashed var(--basic-seagull);
+}
+
+.sort-item a:hover {
+  color: var(--basic-seagull);
+}
+
+.sort-item a:focus {
+  color: var(--basic-seagull);
+  border: transparent;
+}
+
+.sort-item a:active {
+  color: var(--basic-black);
+  border: transparent;
+}
+
+/* Hotels-list*/
+
+.result-item {
+  list-style: none;
+}
+
+.hotel-item {
+  list-style: none;
+}
+
+.star-item {
+  list-style: none;
+}
+
+a .caption-hotel:hover {
+  color: var(--basic-seagull);
+}
+
+a .caption-hotel:active {
+  color: var(--basic-light-black);
+}
+
+.about-hotel {
+  font-size: 14px;
+  line-height: 21px;
+  color: var(--basic-night-rider);
+}
+
+.rating {
+  color: var(--basic-dim-gray);
 }
