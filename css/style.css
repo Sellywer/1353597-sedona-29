@@ -25,7 +25,7 @@
   --basic-light-black: rgba(0, 0, 0, 0.3);
   --basic-dim-gray-light: #6a6a6a;
   --basic-dim-gray: #666666;
-  --basic-night-rider: #333333;
+  --basic-night-rider: #  ;
   --basic-seagull: #81b3d2;
   --basic-light-shakespeare: #669ec0;
   --basic-shakespeare: #5496bd;
@@ -112,6 +112,13 @@ img {
   text-transform: uppercase;
   text-align: center;
 }
+
+.main-pic-sedona {
+  width: 1200px;
+  height: 509px;
+  background-color: var(--basic-light-black);
+}
+
 /* Features */
 
 .features-title {
@@ -235,6 +242,12 @@ img {
 .social-button:hover,
 .social-button:focus {
   background-color: var(--basic-white);
+}
+
+.social-icon {
+  width: 46px;
+  height: 48px;
+  background-color: var(--basic-seagull);
 }
 
 /* Copyright */
