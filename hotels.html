@@ -25,14 +25,14 @@
           </ul>
         </nav>
       </header>
-      <main class="container">
-        <h1>Поиск жилья</h1>
+      <main class="container hotels">
+        <h1 class="visually-hidden">Поиск жилья</h1>
         <section>
-          <h2>Фильтр жилья</h2>
+          <h2 class="visually-hidden">Фильтр жилья</h2>
           <!-- Здесь будет форма фильтра -->
         </section>
         <section class="result">
-          <h3>Результаты поиска</h3>
+          <h3 class="visually-hidden">Результаты поиска</h3>
           <div class="result-sort">
             <span class="caption">Найдено: 3</span>
             <h3 class="sort">Сортировка:</h3>
@@ -52,7 +52,7 @@
               <li class="result-item"><a href="#">По убыванию</a></li>
             </ul>
           </div>
-          <div class="hotels">
+          <div class="hotels-result">
             <ul class="hotel-list">
               <li class="hotel-item">
                 <img
@@ -69,8 +69,10 @@
                     <span class="about-hotel">Гостиница </span>
                     <span class="about-hotel"> От 4000 р.</span>
                   </div>
-                  <a class="button search-button" href="#">Подробнее</a>
-                  <a class="button" href="#">Забронировать</a>
+                  <div class="button-hotel">
+                    <a class="button search-button" href="#">Подробнее</a>
+                    <a class="button" href="#">Забронировать</a>
+                  </div>
                 </div>
                 <div class="star">
                   <ul class="star-list">
@@ -98,8 +100,10 @@
                     <span class="about-hotel">Мотель </span>
                     <span class="about-hotel"> От 3000 р.</span>
                   </div>
-                  <a class="button search-button" href="#">Подробнее</a>
-                  <a class="button" href="#">Забронировать</a>
+                  <div class="button-hotel">
+                    <a class="button search-button" href="#">Подробнее</a>
+                    <a class="button" href="#">Забронировать</a>
+                  </div>
                 </div>
                 <div class="star">
                   <ul class="star-list">
@@ -123,12 +127,12 @@
                   <a href="#">
                     <h3 class="caption caption-hotel">Villas at Poco Diablo</h3>
                   </a>
-                  <div>
-                    <span class="about-hotel">Апартаменты </span>
-                    <span class="about-hotel"> От 2000 р.</span>
+                  <span class="about-hotel">Апартаменты </span>
+                  <span class="about-hotel"> От 2000 р.</span>
+                  <div class="button-hotel">
+                    <a class="button search-button" href="#">Подробнее</a>
+                    <a class="button" href="#">Забронировать</a>
                   </div>
-                  <a class="button search-button" href="#">Подробнее</a>
-                  <a class="button" href="#">Забронировать</a>
                 </div>
                 <div class="star">
                   <ul class="star-list">
