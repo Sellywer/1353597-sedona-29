@@ -65,6 +65,8 @@ body {
   font-weight: 700;
   color: var(--basic-black);
   background-color: var(--special-white-smoke);
+  text-transform: uppercase;
+  text-align: center;
 }
 
 .page-wrapper {
@@ -94,9 +96,8 @@ img {
 
 /* Main navigation */
 
-.main-header {
-  text-transform: uppercase;
-  text-align: center;
+.container-header {
+  padding: 0px 72px;
 }
 
 .main-navigation {
@@ -107,6 +108,8 @@ img {
 }
 
 .site-navigation {
+  display: flex;
+  justify-content: space-between;
   list-style: none;
   color: var(--basic-black);
   background-color: var(--basic-white);
@@ -126,12 +129,7 @@ img {
   color: var(--basic-light-black);
 }
 
-/* Container*/
-
-.container {
-  text-transform: uppercase;
-  text-align: center;
-}
+/*Main*/
 
 .main-pic-sedona {
   width: 1200px;
@@ -256,30 +254,42 @@ img {
 .main-footer {
   color: var(--basic-black);
   background-color: var(--basic-extra-white);
-  text-transform: uppercase;
-  text-align: center;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   margin-top: 25px;
+  align-items: center;
+  justify-items: center;
 }
 
 /* Contacts */
-.footer-contacts {
-  margin: 0;
-  width: 350px;
-  padding-left: 100px;
+
+.page-footer {
+  padding: 0px 111px;
 }
 
-.footer-copyright {
-  margin: 0;
+.footer-contacts p {
+  display: flex;
   width: 350px;
-  padding-top: 25px;
+  justify-content: center;
 }
 
 .footer-contacts a {
   color: var(--basic-black);
   font-size: 21px;
   line-height: 26px;
+  padding-left: 5px;
+}
+
+.footer-copyright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 350px;
+  padding-top: 25px;
+}
+
+.footer-copyright a {
+  padding-left: 10px;
 }
 
 /* Social buttons */
@@ -302,6 +312,7 @@ img {
   width: 48px;
   height: 48px;
   background-color: var(--basic-seagull);
+  margin-right: 5px;
 }
 
 .social-button:hover,
@@ -389,15 +400,18 @@ img {
 
 /* Hotels-list*/
 
+.container-hotel {
+  padding: 0px 72px;
+}
+
 .result {
   display: grid;
-  grid-template-rows: auto auto;
-  margin: 0%;
-  padding: 0%;
+  grid-template-rows: 55px auto;
 }
 
 .sort-list {
   display: flex;
+  justify-content: space-between;
 }
 
 .result-sort {
