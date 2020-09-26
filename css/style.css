@@ -100,11 +100,19 @@ img {
   padding: 0px 72px;
 }
 
+.header-logo {
+  position: relative;
+  z-index: 2;
+}
+
 .main-navigation {
   font-size: 14px;
   line-height: 26px;
   color: var(--basic-black);
   background-color: transparent;
+  position: relative;
+  z-index: 1;
+  top: -70px;
 }
 
 .site-navigation {
@@ -114,6 +122,8 @@ img {
   color: var(--basic-black);
   background-color: var(--basic-white);
 }
+
+.site-n
 
 /* User navigation */
 
@@ -401,7 +411,7 @@ img {
 /* Hotels-list*/
 
 .container-hotel {
-  padding: 0px 72px;
+  padding: 0px 78px;
 }
 
 .result {
@@ -409,14 +419,19 @@ img {
   grid-template-rows: 55px auto;
 }
 
-.sort-list {
-  display: flex;
-  justify-content: space-between;
-}
-
 .result-sort {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.sort-list {
+  display: flex;
+  justify-content: start;
+}
+
+.sort-list li {
+  padding-right: 5px;
 }
 
 .result-list {
