@@ -442,6 +442,8 @@ img {
 
 .container-hotel {
   padding: 0px 78px;
+  outline-offset: -5px;
+  outline: 5px solid rgba(255, 0, 0, 0.7);
 }
 
 .result {
@@ -453,23 +455,36 @@ img {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  outline-offset: -5px;
+  outline: 5px solid rgba(0, 255, 0, 0.7);
 }
 
 .sort-list {
   display: flex;
   justify-content: start;
+  outline-offset: -5px;
+  outline: 5px solid rgba(0, 255, 0, 0.7);
 }
 
 .sort-list li {
   padding-right: 5px;
+
+  outline-offset: -5px;
+  outline: 5px solid rgba(238, 255, 0, 0.7);
 }
 
 .result-list {
   display: flex;
+
+  outline-offset: -5px;
+  outline: 5px solid rgba(0, 0, 255, 0.7);
 }
 
 .result-item {
   list-style: none;
+
+  outline-offset: -5px;
+  outline: 5px solid rgba(238, 255, 0, 0.7);
 }
 
 .hotel-item {
@@ -477,11 +492,18 @@ img {
   display: flex;
   justify-content: space-between;
   margin-bottom: 40px;
+
+  outline-offset: -5px;
+  outline: 5px solid rgba(255, 6, 0, 0.3);
 }
 
 .star-item {
   list-style: none;
   display: flex;
+  background-color: violet;
+  background-image: url("img/star.svg");
+  width: 17px`;
+  height: 17px;
 }
 
 a .caption-hotel:hover {
@@ -496,6 +518,9 @@ a .caption-hotel:active {
   font-size: 14px;
   line-height: 21px;
   color: var(--basic-night-rider);
+
+  outline-offset: -5px;
+  outline: 5px solid rgba(0, 255, 255, 0.7);
 }
 
 .rating {
@@ -504,4 +529,6 @@ a .caption-hotel:active {
 
 .button-hotel {
   display: flex;
+  outline-offset: -5px;
+  outline: 5px solid rgba(238, 255, 0, 0.7);
 }
