@@ -95,21 +95,30 @@ img {
 }
 
 /* Main navigation */
+.main-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 .container-header {
-  padding: 0px 72px;
+  min-height: 70px;
+  width: 1054px;
+  margin: 0 auto;
 }
 
 .header-logo {
   position: relative;
   z-index: 2;
+  width: 138px;
+  height: 70px;
+  margin: auto;
 }
 
 .main-navigation {
   font-size: 14px;
   line-height: 26px;
   color: var(--basic-black);
-  background-color: transparent;
   position: relative;
   z-index: 1;
   top: -70px;
@@ -117,18 +126,39 @@ img {
 
 .site-navigation {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   list-style: none;
   color: var(--basic-black);
   background-color: var(--basic-white);
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
-.site-n
+.site-navigation li {
+  width: 227px;
+}
 
-/* User navigation */
+/* User navigation*/
 
 .site-navigation a {
   color: var(--basic-black);
+}
+
+.item-navigation:first-child,
+.item-navigation:nth-child(n + 4),
+.item-navigation:nth-child(4n + 2) {
+  text-align: start;
+}
+
+.item-navigation:nth-child(4n + 3),
+.item-navigation:nth-child(4n) {
+  text-align: end;
+}
+
+.item-navigation:nth-child(4n + 2) {
+  margin-right: auto;
 }
 
 .site-navigation a:hover {
