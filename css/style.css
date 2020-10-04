@@ -380,7 +380,9 @@ p.features-desc {
   background-color: var(--special-roman-coffee);
   border: none;
   cursor: pointer;
-  padding: 30px 124px 30px 125px;
+  padding: 30px 139px;
+  font-size: 21px;
+  line-height: 26px;
 }
 
 .button:hover {
@@ -395,6 +397,12 @@ p.features-desc {
 .search-button {
   background-color: var(--basic-seagull);
   margin-right: 5px;
+}
+
+.button-hotel .button {
+  font-size: 14px;
+  line-height: 21px;
+  padding: 3px 17px 3px 16px;
 }
 
 .search-button:hover {
@@ -612,11 +620,25 @@ p.features-desc {
 
 .result-list {
   display: flex;
+  justify-content: space-between;
+  width: 34px;
   flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-.result-item {
-  list-style: none;
+.result-item a {
+  width: 11px;
+  height: 10px;
+}
+
+.result-up {
+  background-image: url("../img/icon-up-dir.svg");
+}
+
+.result-down {
+  background-image: url("../img/icon-down-dir.svg");
 }
 
 .hotel-list {
@@ -676,9 +698,16 @@ p.features-desc {
 
 .star-item {
   list-style: none;
-  background-color: var(--basic-light-black);
   width: 17px;
   height: 17px;
+  background-image: url("../img/star.svg");
+  background-repeat: no-repeat;
+  align-items: flex-end;
+  margin-right: 6px;
+}
+
+.star-item:last-child {
+  margin-right: 0;
 }
 
 a .caption-hotel {
