@@ -33,6 +33,7 @@
   --basic-extra-white: rgba(255, 255, 255, 0.9);
   --basic-light-white: rgba(255, 255, 255, 0.3);
   --basic-grey: #888888;
+  --special-whisper: #e5e5e5;
   --special-roman-coffee: #766357;
   --special-saddle: #604e43;
   --special-paco: #503e33;
@@ -677,11 +678,11 @@ p.features-desc {
   align-items: flex-end;
   flex-wrap: wrap;
   padding: 30px 73px;
-  border-top: 1px solid;
+  border-top: 1px solid var(--special-whisper);
 }
 
 .hotel-item:last-child {
-  border-bottom: 1px solid;
+  border-bottom: 1px solid var(--special-whisper);
 }
 
 .hotel-item-image {
