@@ -169,17 +169,32 @@ img {
 
 /*Main*/
 
-.main-pic-sedona {
+.main-picture {
   width: 1200px;
   height: 509px;
-  background-color: var(--basic-light-black);
   text-align: center;
   background-image: url("../img/Sedona.jpg");
+  background-repeat: no-repeat;
+}
+
+.main-pic-sedona {
+  position: relative;
+  width: 1200px;
+  height: 509px;
 }
 
 .main-pic-sedona img {
-  justify-content: center;
-  padding-top: 60px;
+  width: 457px;
+  height: 351px;
+  padding-top: 75px;
+}
+
+.main-picture svg {
+  position: absolute;
+  width: 1200px;
+  height: 57px;
+  bottom: 0;
+  left: 0;
 }
 
 /* Features */
@@ -256,6 +271,12 @@ p.features-desc {
 
 .features-city p {
   padding-top: 10px;
+}
+
+.city-pic {
+  align-self: stretch;
+  object-fit: cover;
+  object-position: center;
 }
 
 .bridge {
@@ -581,10 +602,6 @@ p.features-desc {
 
 /* Hotels-list*/
 
-.container-hotel {
-  padding: 0px 72px;
-}
-
 .result {
   display: grid;
   grid-template-rows: min-content auto;
@@ -593,11 +610,11 @@ p.features-desc {
 .result-sort {
   display: flex;
   justify-content: flex-start;
-  width: 100%;
   margin: 0;
   padding: 0;
   align-items: center;
   flex-wrap: wrap;
+  padding: 30px 73px;
 }
 
 .result-sort .caption {
@@ -611,11 +628,14 @@ p.features-desc {
   padding: 0;
   margin: 0;
   margin-left: 41px;
-  margin-right: auto;
 }
 
 .sort-item {
   margin-right: 35px;
+}
+
+.sort-item:last-child {
+  margin-right: 0;
 }
 
 .result-list {
@@ -626,6 +646,8 @@ p.features-desc {
   list-style: none;
   padding: 0;
   margin: 0;
+  margin-left: auto;
+  right: 0;
 }
 
 .result-item a {
@@ -654,7 +676,12 @@ p.features-desc {
   justify-content: space-between;
   align-items: flex-end;
   flex-wrap: wrap;
-  min-height: 150px;
+  padding: 30px 73px;
+  border-top: 1px solid;
+}
+
+.hotel-item:last-child {
+  border-bottom: 1px solid;
 }
 
 .hotel-item-image {
@@ -679,14 +706,14 @@ p.features-desc {
   font-size: 14px;
   line-height: 21px;
   color: var(--basic-night-rider);
-  margin: 13px 10px 13px 0px;
+  margin: 13px 0px;
   width: 110px;
-  text-align: start;
+  text-align: left;
   text-transform: uppercase;
 }
 
 .star {
-  align-self: flex-end;
+  text-align: right;
 }
 
 .star-list {
@@ -704,6 +731,11 @@ p.features-desc {
   background-repeat: no-repeat;
   align-items: flex-end;
   margin-right: 6px;
+  display: none;
+}
+
+.star-item-active {
+  display: block;
 }
 
 .star-item:last-child {
@@ -725,6 +757,8 @@ a .caption-hotel:active {
 
 .rating {
   color: var(--basic-dim-gray);
+  padding: 8px 13px;
+  background-color: var(--special-white-smoke);
 }
 
 .button-hotel {
