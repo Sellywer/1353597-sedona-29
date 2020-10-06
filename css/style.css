@@ -603,6 +603,10 @@ p.features-desc {
 
 /* Hotels-list*/
 
+
+
+/*Results*/
+
 .result {
   display: grid;
   grid-template-rows: min-content auto;
