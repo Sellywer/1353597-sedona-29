@@ -1,10 +1,8 @@
 /* Filters*/
 
 .filter-housing {
-  outline-offset: -5px;
-  outline: 5px solid rgba(255, 0, 0, 0.7);
-  width: 1200px;/*
-  height: 217px;*/
+  width: 1200px;
+  height: 217px;
   color: white;
   background-color: #333333;
   background-image: url("../img/sedona-background.jpg");
@@ -19,9 +17,52 @@
   padding: 30px 72px;
 }
 
+.filter ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.filter-option label {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  user-select: none;
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: uppercase;
+}
+
+.filter legend {
+  margin-bottom: 24px;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.filter-input-checkbox + label::before {
+  content: "";
+  order: 0;
+  position: absolute;
+  left: -42px;
+  top: 0;
+  width: 23px;
+  height: 23px;
+  background-image: url("../img/checkbox-off.svg");
+}
+
+.filter-input-checkbox:checked + label::after {
+  content: "";
+  order: 5;
+  position: absolute;
+  top: 0;
+  left: -42px;
+  width: 23px;
+  height: 23px;
+  background-image: url("../img/checkbox-on.svg");
+}
+
 .filter-by-type {
-  outline-offset: -5px;
-  outline: 5px solid rgba(0, 255, 34, 0.7);
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -36,16 +77,22 @@
 }
 
 .filter fieldset {
-    padding: 0;
-    margin: 0;
-    margin-bottom: 30px;
-    border: none;
-  }
-  
-.filter-item li{
+  padding: 0;
+  margin: 0;
+  margin-bottom: 30px;
+  border: none;
+}
+.filter-by-type div {
+  width: 200px;
+  margin-right: 58px;
+}
+
+.filter-item li {
   margin: 0;
   padding: 0;
   border: none;
+  padding-bottom: 25px;
+  padding-left: 40px;
 }
 
 .range-filter {
@@ -65,19 +112,20 @@
   margin-bottom: 15px;
   padding-top: 39px;
   padding-right: 20px;
-  padding-left: 20px;
+  padding-left: 0;
   border-radius: 5px;
+  right: 0;
 }
 
 .range-controls .scale {
   height: 2px;
   background: rgba(255, 255, 255, 0.3);
 }
-/*
+
 .range-controls .bar {
-  width: 70%;
+  width: 170%;
   height: 2px;
-  background: #00ca74;
+  background: white;
 }
 /*
 .range-controls .toggle {
@@ -106,7 +154,6 @@
   display: flex;
   justify-content: space-between;
   border: 2px solid white;
-
 }
 
 .price-controls label {
@@ -127,4 +174,3 @@
   font-family: inherit;
   font-size: inherit;
 }
-*/

@@ -74,35 +74,31 @@
               <fieldset class="filter-item">
                 <legend>Тип жилья:</legend>
                 <ul>
-                  <li class="filter-option filter-radio">
+                  <li class="filter-option filter-checkbox">
                     <input
-                      class="visually-hidden filter-input-radio filter-input"
-                      type="checked"
-                      name="product-group"
-                      value="
-hotel"
+                      class="visually-hidden filter-input-checkbox filter-input"
+                      type="checkbox"
+                      name="hotel"
                       id="filter-hotel"
                       checked
                     />
                     <label for="filter-hotel">Гостиница</label>
                   </li>
-                  <li class="filter-option filter-radio">
+                  <li class="filter-option filter-checkbox">
                     <input
-                      class="visually-hidden filter-input-radio filter-input"
-                      type="checked"
-                      name="product-group"
-                      value="motel"
+                      class="visually-hidden filter-input-checkbox filter-input"
+                      type="checkbox"
+                      name="motel"
                       id="filter-motel"
                       checked
                     />
                     <label for="filter-motel">Мотель</label>
                   </li>
-                  <li class="filter-option filter-radio">
+                  <li class="filter-option filter-checkbox">
                     <input
-                      class="visually-hidden filter-input-radio filter-input"
+                      class="visually-hidden filter-input-checkbox filter-input"
                       type="checkbox"
-                      name="product-group"
-                      value="apartments"
+                      name="apartments"
                       id="filter-apartments"
                       checked
                     />
@@ -110,42 +106,6 @@ hotel"
                   </li>
                 </ul>
               </fieldset>
-            </div>
-            <div class="filter-by-price">
-              <fieldset class="filter-item">
-                <legend>Стоимость в сутки (Р):</legend>
-                <div class="range-filter">
-                  <div class="price-controls">
-                    <label class="min-price">
-                      <input type="number" name="min-price" value=" ОТ 0" />
-                    </label>
-                    <label class="max-price">
-                      <input type="number" name="max-price" value="ДО 3000" />
-                    </label>
-                  </div>
-                  <div class="range-controls">
-                    <div class="scale">
-                      <div
-                        class="bar"
-                        style="width: 30%; margin-left: 20%"
-                      ></div>
-                    </div>
-                    <div
-                      class="toggle toggle-min"
-                      tabindex="0"
-                      style="left: 14px"
-                    ></div>
-                    <div
-                      class="toggle toggle-max"
-                      tabindex="0"
-                      style="left: 262px"
-                    ></div>
-                  </div>
-                </div>
-              </fieldset>
-              <button type="submit" class="filter-button button">
-                Показать
-              </button>
             </div>
           </form>
         </section>
