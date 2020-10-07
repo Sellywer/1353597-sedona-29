@@ -14,7 +14,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 30px 72px;
+  padding: 26px 71px;
 }
 
 .filter ul {
@@ -38,6 +38,7 @@
   font-weight: bold;
   font-size: 16px;
   line-height: 21px;
+  text-transform: uppercase;
 }
 
 .filter-input-checkbox + label::before {
@@ -66,25 +67,26 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
-  width: 50%;
-}
-
-.filter-by-price {
-  outline-offset: -5px;
-  outline: 5px solid rgba(0, 255, 34, 0.7);
   width: 50%;
 }
 
 .filter fieldset {
   padding: 0;
   margin: 0;
-  margin-bottom: 30px;
   border: none;
+  margin-right: 120px;
 }
 .filter-by-type div {
   width: 200px;
   margin-right: 58px;
+}
+
+.filter-item {
+  margin-right: 40px;
+}
+
+.filter-item ul {
+  padding-left: 42px;
 }
 
 .filter-item li {
@@ -92,24 +94,40 @@
   padding: 0;
   border: none;
   padding-bottom: 25px;
-  padding-left: 40px;
+}
+
+.filter-item li:last-child {
+  padding-bottom: 0;
+}
+
+/* Filter-by-price */
+
+.filter-by-price {
+  width: 50%;
+}
+
+.filter-item-price {
+  padding: 0;
+  margin: 0;
+  border: none;
 }
 
 .range-filter {
-  width: 316px;
+  width: 317px;
+  margin-top: 10px;
 }
 
-.filter-item legend {
+.filter-item-price legend {
   font-size: 16px;
   line-height: 21px;
   text-transform: uppercase;
   font-weight: 700;
+  margin-bottom: 0;
 }
 
 .range-controls {
   position: relative;
   height: 41px;
-  margin-bottom: 15px;
   padding-top: 39px;
   padding-right: 20px;
   padding-left: 0;
@@ -118,22 +136,24 @@
 }
 
 .range-controls .scale {
+  width: 316px;
   height: 2px;
   background: rgba(255, 255, 255, 0.3);
 }
 
 .range-controls .bar {
-  width: 170%;
+  width: 248px;
   height: 2px;
   background: white;
+  margin-left: 14px;
 }
-/*
+
 .range-controls .toggle {
   position: absolute;
   top: 31px;
   left: 0;
-  width: 4px;
-  height: 4px;
+  width: 5px;
+  height: 5px;
   padding: 0;
   border: 8px solid #ffffff;
   background-color: #ababab;
@@ -141,25 +161,17 @@
   box-shadow: 0 2px 1px 0 #cfcfcf;
   cursor: pointer;
 }
-/*
+
+.toggle:hover {
+  transform: scale(1.2);
+}
+
 .range-controls .toggle-min {
-  left: 18px;
+  left: 9px;
 }
-/*
+
 .range-controls .toggle-max {
-  left: 160px;
-}*/
-
-.price-controls {
-  display: flex;
-  justify-content: space-between;
-  border: 2px solid white;
-}
-
-.price-controls label {
-  text-transform: uppercase;
-  font-family: var(--font-main);
-  font-size: 16px;
+  left: 245px;
 }
 
 .price-controls input {
@@ -173,4 +185,26 @@
   background: #f1f1f1;
   font-family: inherit;
   font-size: inherit;
+}
+
+.price-controls {
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid white;
+}
+
+.price-controls label {
+  text-transform: uppercase;
+  font-family: var(--font-main);
+  font-size: 16px;
+}
+
+.filter-button {
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+  border: 2px solid #ffffff;
+  box-sizing: border-box;
+  border-radius: 2px;
+  padding: 8px 36px;
 }
