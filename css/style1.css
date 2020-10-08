@@ -52,13 +52,13 @@
   background-image: url("../img/checkbox-off.svg");
 }
 
-.filter-input-checkbox:checked + label::after {
+.filter-input-checkbox:checked + label:before {
   content: "";
   order: 5;
   position: absolute;
   top: 0;
   left: -42px;
-  width: 23px;
+  width: 27px;
   height: 23px;
   background-image: url("../img/checkbox-on.svg");
 }
@@ -67,22 +67,26 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  width: 50%;
 }
 
-.filter fieldset {
+.filter-item {
   padding: 0;
   margin: 0;
   border: none;
   margin-right: 120px;
 }
+
+.filter:last-child {
+  margin-right: 0;
+}
+
 .filter-by-type div {
   width: 200px;
   margin-right: 58px;
 }
 
 .filter-item {
-  margin-right: 40px;
+  margin-right: 120px;
 }
 
 .filter-item ul {
@@ -103,7 +107,6 @@
 /* Filter-by-price */
 
 .filter-by-price {
-  width: 50%;
 }
 
 .filter-item-price {
@@ -207,4 +210,5 @@
   box-sizing: border-box;
   border-radius: 2px;
   padding: 8px 36px;
+  background-color: transparent;
 }
