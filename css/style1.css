@@ -14,7 +14,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 26px 71px;
+  padding: 26px 71px 0 71px;
 }
 
 .filter ul {
@@ -50,6 +50,10 @@
   width: 23px;
   height: 23px;
   background-image: url("../img/checkbox-off.svg");
+}
+
+.filter-input-checkbox:disabled + label::before {
+  opacity: 0.3;
 }
 
 .filter-input-checkbox:checked + label:before {
@@ -107,6 +111,18 @@
 /* Filter-by-price */
 
 .filter-by-price {
+  position: relative;
+}
+
+.filter-item-price::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 22px;
+  background-color: white;
+  top: 39px;
+  left: 50%;
+  transform: translateX(50%);
 }
 
 .filter-item-price {
@@ -117,7 +133,8 @@
 
 .range-filter {
   width: 317px;
-  margin-top: 10px;
+  margin-top: 12px;
+  padding-right: 3px;
 }
 
 .filter-item-price legend {
@@ -131,11 +148,7 @@
 .range-controls {
   position: relative;
   height: 41px;
-  padding-top: 39px;
-  padding-right: 20px;
-  padding-left: 0;
-  border-radius: 5px;
-  right: 0;
+  margin-top: 20px;
 }
 
 .range-controls .scale {
@@ -153,10 +166,10 @@
 
 .range-controls .toggle {
   position: absolute;
-  top: 31px;
   left: 0;
-  width: 5px;
-  height: 5px;
+  top: -8px;
+  width: 2px;
+  height: 2px;
   padding: 0;
   border: 8px solid #ffffff;
   background-color: #ababab;
@@ -170,36 +183,40 @@
 }
 
 .range-controls .toggle-min {
-  left: 9px;
+  left: 2px;
 }
 
 .range-controls .toggle-max {
-  left: 245px;
+  left: 255px;
 }
 
 .price-controls input {
-  width: 60px;
-  padding: 10px;
-  margin-left: 10px;
-  text-align: center;
-  color: #283136;
+  width: 52px;
+  text-align: left;
   border: none;
   border-radius: 5px;
   background: #f1f1f1;
   font-family: inherit;
   font-size: inherit;
+  background-color: transparent;
+  color: white;
+  font-weight: 700;
 }
 
 .price-controls {
   display: flex;
-  justify-content: space-between;
   border: 2px solid white;
+  width: 312px;
+  height: 33px;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .price-controls label {
   text-transform: uppercase;
   font-family: var(--font-main);
   font-size: 16px;
+  padding-left: 35px;
 }
 
 .filter-button {
@@ -211,4 +228,100 @@
   border-radius: 2px;
   padding: 8px 36px;
   background-color: transparent;
+  margin-top: -15px;
+}
+
+.filter-button:hover {
+  background-color: white;
+  color: black;
+}
+
+/* Modal */
+
+.modal {
+  position: absolute;
+  transform: translateX(-50%);
+  left: 50%;
+  bottom: 328px;
+  background-color: white;
+  width: 458px;
+  font-family: var(--font-main);
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 700;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.7);
+  padding: 25px 55px 55px 55px;
+}
+
+.number-of-persons {
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+  font-family: var(--font-main);
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 700;
+}
+
+p.date {
+  padding: 0;
+  margin: 32px 0;
+}
+
+.number-of-persons p {
+  padding: 0;
+  margin: 0;
+}
+
+.date input {
+  position: relative;
+  border: none;
+  width: 320px;
+  height: 38px;
+  color: black;
+  margin-left: 38px;
+  text-align: left;
+  font-family: var(--font-main);
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 700;
+}
+
+.date-input::after {
+  content: "";
+  position: absolute;
+  width: 21px;
+  height: 23px;
+  background-image: url("../img/calendar.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.number-of-persons-item input {
+  border: none;
+  margin-left: 94px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.number-of-persons-item input::before,
+.number-of-persons-item input::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 2px;
+  width: 19px;
+  height: 3px;
+  background-color: var(--basic-dark);
+}
+
+.button-modal {
+  display: block;
+  width: 100%;
+  margin-top: 60px;
+  margin-right: 0;
+  background-color: #81b3d2;
+  padding: 16px 139px;
 }

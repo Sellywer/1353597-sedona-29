@@ -5,6 +5,7 @@
     <title>HTML Academy: Седона</title>
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style1.css" />
   </head>
   <body class="page-body">
     <div class="page-wrapper">
@@ -161,7 +162,7 @@
           </div>
         </section>
       </main>
-      <footer class="page-footer main-footer">
+      <footer class="page-footer mmain-footer">
         <div class="footer-contacts">
           <a href="#"> #visitSEDONA</a>
           <div class="phone">
@@ -251,6 +252,29 @@
           </a>
         </div>
       </footer>
-    </div>
+    <section class="modal">
+      <h2 class="visually-hidden">Найти</h2>
+      <form class="" action="https://echo.htmlacademy.ru" method="post">
+          <p class="date">
+            <label for="arrival-on">Дата заезда:</label>
+            <input class="date-input" id="arrival-on" type="text" name="date" placeholder="04 апреля 2017">
+          </p>
+          <p class="date">
+            <label for="arrival-off">Дата выезда:</label>
+            <input class="date-input" id="arrival-off" type="text" name="date" placeholder="04 июля 2017">
+          </p>
+          <div class="number-of-persons">
+          <p class="number-of-persons-item">
+            <label for="amount">Взрослые:</label>
+      <input type="number" min="0" max="50" step="1" id="amount" name="amount" value="2">
+          </p>
+          <p class="number-of-persons-item">
+            <label for="amount">Дети:</label>
+      <input type="number" min="0" max="50" step="1" id="amount" name="amount" value="0">
+          </p>
+        </div>
+        <button class="button button-modal" type="submit">Найти</button>
+      </form>
+    </section>
   </body>
 </html>
