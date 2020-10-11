@@ -146,7 +146,42 @@
             Укажите предполагаемые даты поездки, <br />
             и мы покажем вам лучшие предложения гостиниц в Cедоне
           </p>
-          <button class="button" type="button">Поиск гостиницы в Седоне</button>
+          <button class="button button-seach" type="button">Поиск гостиницы в Седоне</button>
+          <section class="search-field">
+            <h2 class="visually-hidden">Найти</h2>
+            <form class="" action="https://echo.htmlacademy.ru" method="post">
+                <div class="date">
+                  <label for="arrival-on">Дата заезда:</label>
+                  <div class="search-date">
+                    <input class="date-input" id="arrival-on" type="text" name="date" placeholder="24 апреля 2017">
+                    <button class="button-calendar" type="submit"></button>
+                  </div>
+                </div>
+                <div class="date">
+                  <label for="arrival-off">Дата выезда:</label>
+                  <input class="date-input" id="arrival-off" type="text" name="date" size="100" placeholder="04 июля 2017">
+                </div>
+                <div class="number-of-persons ">
+                <div class="number-of-persons-item">
+                  <label for="amount-of-people">Взрослые:</label>
+                  <div class="button-amount">
+                    <button class="button-plus" type="submit"></button>
+                    <button class="button-minus" type="submit"></button>
+                    <input type="text" id="amount-of-people" name="amount" value="0">
+                  </div> 
+                </div>
+                <div class="number-of-persons-item">
+                  <label for="amount-of-child">Дети:</label>
+                  <div class="button-amount-of-child">
+                    <button class="button-plus" type="submit"></button>
+                    <button class="button-minus" type="submit"></button>
+                    <input type="text" id="amount-of-child" name="amount" value="0">
+                  </div>
+                </div>
+              </div>
+              <button class="button button-modal" type="submit">Найти</button>
+            </form>
+          </section>
           <div class="map">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d838525.4195355885!2d-112.05769290015552!3d34.818772689130455!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1601997811802!5m2!1sru!2sru"
@@ -162,7 +197,7 @@
           </div>
         </section>
       </main>
-      <footer class="page-footer mmain-footer">
+      <footer class="page-footer main-footer">
         <div class="footer-contacts">
           <a href="#"> #visitSEDONA</a>
           <div class="phone">
@@ -235,6 +270,7 @@
           <a
             class="footer-academy-link"
             href="https://htmlacademy.ru/intensive/htmlcss"
+            aria-label="Сыллка на сайт Академии"
           >
             <svg
               width="115"
@@ -252,29 +288,6 @@
           </a>
         </div>
       </footer>
-    <section class="modal">
-      <h2 class="visually-hidden">Найти</h2>
-      <form class="" action="https://echo.htmlacademy.ru" method="post">
-          <p class="date">
-            <label for="arrival-on">Дата заезда:</label>
-            <input class="date-input" id="arrival-on" type="text" name="date" placeholder="04 апреля 2017">
-          </p>
-          <p class="date">
-            <label for="arrival-off">Дата выезда:</label>
-            <input class="date-input" id="arrival-off" type="text" name="date" placeholder="04 июля 2017">
-          </p>
-          <div class="number-of-persons">
-          <p class="number-of-persons-item">
-            <label for="amount">Взрослые:</label>
-      <input type="number" min="0" max="50" step="1" id="amount" name="amount" value="2">
-          </p>
-          <p class="number-of-persons-item">
-            <label for="amount">Дети:</label>
-      <input type="number" min="0" max="50" step="1" id="amount" name="amount" value="0">
-          </p>
-        </div>
-        <button class="button button-modal" type="submit">Найти</button>
-      </form>
-    </section>
+
   </body>
 </html>

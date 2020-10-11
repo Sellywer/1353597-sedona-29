@@ -418,6 +418,11 @@ p.features-desc {
   line-height: 26px;
 }
 
+.button-seach {
+  position: relative;
+  z-index: 1;
+}
+
 .button:hover {
   background-color: var(--special-saddle);
 }
