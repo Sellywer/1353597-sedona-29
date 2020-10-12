@@ -2,11 +2,11 @@
 
 .filter-housing {
   width: 1200px;
-  height: 217px;
   color: white;
   background-color: #333333;
   background-image: url("../img/sedona-background.jpg");
-  background-repeat: repeat;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .filter {
@@ -14,7 +14,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 30px 71px 0 71px;
+  padding: 26px 73px 32px 73px;
 }
 
 .filter ul {
@@ -25,12 +25,12 @@
 
 .filter-option label {
   position: relative;
-  display: block;
+  padding: 5px 0 5px 40px;
   cursor: pointer;
-  user-select: none;
   font-size: 14px;
   line-height: 21px;
   text-transform: uppercase;
+  font-weight: 400;
 }
 
 .filter legend {
@@ -43,10 +43,10 @@
 
 .filter-input-checkbox + label::before {
   content: "";
-  order: 0;
   position: absolute;
-  left: -42px;
-  top: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
   width: 23px;
   height: 23px;
   background-image: url("../img/checkbox-off.svg");
@@ -58,10 +58,10 @@
 
 .filter-input-checkbox:checked + label:before {
   content: "";
-  order: 5;
   position: absolute;
-  top: 0;
-  left: -42px;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
   width: 27px;
   height: 23px;
   background-image: url("../img/checkbox-on.svg");
@@ -77,35 +77,29 @@
   padding: 0;
   margin: 0;
   border: none;
-  margin-right: 120px;
 }
 
 .filter:last-child {
   margin-right: 0;
 }
 
-.filter-by-type div {
-  width: 200px;
-  margin-right: 58px;
-}
-
 .filter-item {
-  margin-right: 120px;
+  margin-right: 104px;
 }
 
 .filter-item ul {
-  padding-left: 42px;
 }
 
 .filter-item li {
   margin: 0;
   padding: 0;
   border: none;
-  padding-bottom: 25px;
+  margin-bottom: 21px;
+  width: 150px;
 }
 
 .filter-item li:last-child {
-  padding-bottom: 0;
+  margin-bottom: 0;
 }
 
 /* Filter-by-price */
@@ -119,7 +113,7 @@
   position: absolute;
   width: 2px;
   height: 22px;
-  background-color: white;
+  background-color: var(--basic-white);
   top: 39px;
   left: 50%;
   transform: translateX(50%);
@@ -134,7 +128,6 @@
 .range-filter {
   width: 317px;
   margin-top: 12px;
-  padding-right: 3px;
 }
 
 .filter-item-price legend {
@@ -147,8 +140,8 @@
 
 .range-controls {
   position: relative;
-  height: 41px;
-  margin-top: 20px;
+  margin-top: 22px;
+  margin-bottom: 32px;
 }
 
 .range-controls .scale {
@@ -167,14 +160,14 @@
 .range-controls .toggle {
   position: absolute;
   left: 0;
-  top: -8px;
+  top: 50%;
+  transform: translateY(-50%);
   width: 2px;
   height: 2px;
-  padding: 0;
-  border: 8px solid #ffffff;
-  background-color: #ababab;
+  border: 8px solid var(--basic-white);
+  background-color: var(--special-dark-gray);
   border-radius: 50%;
-  box-shadow: 0 2px 1px 0 #cfcfcf;
+  box-shadow: 0 2px 1px 0 var(--special-white-smoke);
   cursor: pointer;
 }
 
@@ -182,53 +175,59 @@
   transform: scale(1.2);
 }
 
-.range-controls .toggle-min {
-  left: 2px;
-}
-
 .range-controls .toggle-max {
   left: 255px;
 }
 
 .price-controls input {
-  width: 52px;
+  width: 40px;
   text-align: left;
   border: none;
   border-radius: 5px;
-  background: #f1f1f1;
+  background: var(--special-white-smoke);
   font-family: inherit;
   font-size: inherit;
   background-color: transparent;
   color: white;
-  font-weight: 700;
+  font-weight: 400;
 }
 
 .price-controls {
   display: flex;
   border: 2px solid white;
   width: 312px;
-  height: 33px;
-  justify-content: space-around;
+  height: 30px;
   align-items: center;
 }
 
 .price-controls label {
   text-transform: uppercase;
   font-family: var(--font-main);
-  font-size: 16px;
-  padding-left: 35px;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+  display: flex;
+  padding: 0px 21px 0 20px;
+  margin-left: 45px;
+}
+
+.min-price label {
+  padding-left: 0;
+}
+
+.max-price label {
+  padding-left: 10px;
 }
 
 .filter-button {
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
-  border: 3px solid #ffffff;
+  border: 1px solid var(--basic-white);
   box-sizing: border-box;
-  border-radius: 2px;
-  padding: 8px 36px;
+  padding: 6px 34px;
   background-color: transparent;
-  margin-top: -12px;
+  margin-right: 95px;
 }
 
 .filter-button:hover {
@@ -255,7 +254,8 @@
 }
 
 .search-date {
-  width: 0;
+  display: flex;
+  justify-content: space-between;
 }
 
 .number-of-persons {
@@ -266,14 +266,21 @@
   font-size: 14px;
   line-height: 26px;
   font-weight: 700;
+  margin-top: 37px;
 }
 
-p.date {
-  padding: 0;
-  margin: 32px 0;
+.date {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin-top: 29px;
 }
 
 .button-calendar {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 10px;
   width: 21px;
   height: 23px;
   border: none;
@@ -285,15 +292,14 @@ p.date {
   justify-content: space-between;
 }
 
-
-.date input {
+.search-date-on {
   position: relative;
+  display: flex;
+  justify-content: left;
+  margin-left: 24px;
   border: none;
-  width: 320px;
   height: 38px;
   color: black;
-  margin-left: 38px;
-  text-align: left;
   font-family: var(--font-main);
   text-transform: uppercase;
   font-size: 14px;
@@ -301,12 +307,37 @@ p.date {
   font-weight: 700;
 }
 
+.search-date-off {
+  position: relative;
+  display: flex;
+  justify-content: left;
+  margin-left: 20px;
+  border: none;
+  height: 38px;
+  color: black;
+  font-family: var(--font-main);
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 700;
+}
+
+.search-date input {
+  border: none;
+  text-transform: uppercase;
+  padding-left: 14px;
+  width: 330px;
+  background-color: var(--special-white-smoke);
+  font-weight: 700;
+}
+
 .number-of-persons-item input {
   border: none;
   text-transform: uppercase;
   font-weight: 700;
-  width: 108px;
+  width: 110px;
   text-align: center;
+  background-color: var(--special-white-smoke);
 }
 
 .button-amount {
@@ -341,11 +372,20 @@ p.date {
   border: none;
 }
 
-.button-modal {
+.button-seach {
   display: block;
   width: 100%;
   margin-top: 60px;
   margin-right: 0;
   background-color: #81b3d2;
   padding: 16px 139px;
+}
+
+.button-seach:hover {
+  background-color: var(--basic-light-shakespeare);
+}
+
+.button-seach:active {
+  background-color: var(--basic-shakespeare);
+  color: var(--basic-light-white);
 }

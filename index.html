@@ -146,20 +146,23 @@
             Укажите предполагаемые даты поездки, <br />
             и мы покажем вам лучшие предложения гостиниц в Cедоне
           </p>
-          <button class="button button-seach" type="button">Поиск гостиницы в Седоне</button>
+          <button class="button button-seach-sedona" type="button">Поиск гостиницы в Седоне</button>
           <section class="search-field">
             <h2 class="visually-hidden">Найти</h2>
             <form class="" action="https://echo.htmlacademy.ru" method="post">
                 <div class="date">
                   <label for="arrival-on">Дата заезда:</label>
-                  <div class="search-date">
-                    <input class="date-input" id="arrival-on" type="text" name="date" placeholder="24 апреля 2017">
+                  <div class="search-date search-date-on">
+                    <input class="date-input" id="arrival-on" type="text" name="date" value="24 апреля 2017">
                     <button class="button-calendar" type="submit"></button>
                   </div>
                 </div>
                 <div class="date">
                   <label for="arrival-off">Дата выезда:</label>
-                  <input class="date-input" id="arrival-off" type="text" name="date" size="100" placeholder="04 июля 2017">
+                  <div class="search-date search-date-off">
+                    <input class="date-input" id="arrival-off" type="text" name="date" value="4 июля 2017">
+                    <button class="button-calendar" type="submit"></button>
+                  </div>
                 </div>
                 <div class="number-of-persons ">
                 <div class="number-of-persons-item">
@@ -167,7 +170,7 @@
                   <div class="button-amount">
                     <button class="button-plus" type="submit"></button>
                     <button class="button-minus" type="submit"></button>
-                    <input type="text" id="amount-of-people" name="amount" value="0">
+                    <input type="text" id="amount-of-people" name="amount" value="2">
                   </div> 
                 </div>
                 <div class="number-of-persons-item">
@@ -179,7 +182,7 @@
                   </div>
                 </div>
               </div>
-              <button class="button button-modal" type="submit">Найти</button>
+              <button class="button button-seach" type="submit">Найти</button>
             </form>
           </section>
           <div class="map">
@@ -187,7 +190,6 @@
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d838525.4195355885!2d-112.05769290015552!3d34.818772689130455!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1601997811802!5m2!1sru!2sru"
               width="1199"
               height="594"
-              frameborder="0"
               style="border: 0"
               allowfullscreen=""
               aria-hidden="false"
@@ -288,6 +290,6 @@
           </a>
         </div>
       </footer>
-
+    </div>
   </body>
 </html>
