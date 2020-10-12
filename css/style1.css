@@ -3,7 +3,7 @@
 .filter-housing {
   width: 1200px;
   color: white;
-  background-color: #333333;
+  background-color: var(--basic-night-rider);
   background-image: url("../img/sedona-background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -147,13 +147,13 @@
 .range-controls .scale {
   width: 316px;
   height: 2px;
-  background: rgba(255, 255, 255, 0.3);
+  background: var(--basic-light-white);
 }
 
 .range-controls .bar {
   width: 248px;
   height: 2px;
-  background: white;
+  background: var(--basic-white);
   margin-left: 14px;
 }
 
@@ -172,7 +172,7 @@
 }
 
 .toggle:hover {
-  transform: scale(1.2);
+  transform: scale(1.1) translateY(-50%);
 }
 
 .range-controls .toggle-max {
@@ -188,13 +188,13 @@
   font-family: inherit;
   font-size: inherit;
   background-color: transparent;
-  color: white;
+  color: var(--basic-white);
   font-weight: 400;
 }
 
 .price-controls {
   display: flex;
-  border: 2px solid white;
+  border: 2px solid var(--basic-white);
   width: 312px;
   height: 30px;
   align-items: center;
@@ -231,8 +231,8 @@
 }
 
 .filter-button:hover {
-  background-color: white;
-  color: black;
+  background-color: var(--basic-white);
+  color: var(--basic-black);
 }
 
 /* Seach */
@@ -242,14 +242,14 @@
   z-index: 0;
   transform: translateX(-50%);
   left: 50%;
-  background-color: white;
+  background-color: var(--basic-white);
   width: 458px;
   font-family: var(--font-main);
   text-transform: uppercase;
   font-size: 14px;
   line-height: 26px;
   font-weight: 700;
-  box-shadow: 0px 7px 15px rgba(0, 1, 1, 0.15);
+  box-shadow: 0px 7px 15px var(--special-black-russian-shadow);
   padding: 25px 55px 55px 55px;
 }
 
@@ -299,7 +299,7 @@
   margin-left: 24px;
   border: none;
   height: 38px;
-  color: black;
+  color: var(--basic-black);
   font-family: var(--font-main);
   text-transform: uppercase;
   font-size: 14px;
@@ -311,10 +311,10 @@
   position: relative;
   display: flex;
   justify-content: left;
-  margin-left: 20px;
+  margin-left: 20px;--basic-seagull
   border: none;
   height: 38px;
-  color: black;
+  color: var(--basic-black);
   font-family: var(--font-main);
   text-transform: uppercase;
   font-size: 14px;
@@ -377,7 +377,7 @@
   width: 100%;
   margin-top: 60px;
   margin-right: 0;
-  background-color: #81b3d2;
+  background-color: var(--basic-seagull);
   padding: 16px 139px;
 }
 

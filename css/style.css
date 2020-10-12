@@ -41,7 +41,7 @@
   --special-white-smoke: #f2f2f2;
   --special-whisper: #ebebeb;
   --special-maverick: #bdbbbc;
-  --spcial-black-russian-shadow: rgba(0, 1, 1, 0.2);
+  --special-black-russian-shadow: rgba(0, 1, 1, 0.2);
   --font-main: "PT Sans", Arial, sans-serif;
 }
 
@@ -87,7 +87,7 @@ img {
   width: 1200px;
   margin: 0 auto;
   background-color: var(--basic-white);
-  box-shadow: 0px 5px 15px var(--spcial-black-russian-shadow);
+  box-shadow: 0px 5px 15px var(--special-black-russian-shadow);
   min-height: 100%;
   display: grid;
   grid-template-rows: min-content 1fr min-content;
@@ -226,7 +226,7 @@ img {
   line-height: 26px;
   text-transform: uppercase;
   text-align: center;
-  padding: 43px 305px 51px 305px;
+  padding: 41px 305px 51px 305px;
 }
 
 p.features-desc {
@@ -465,7 +465,7 @@ p.features-desc {
 
 .main-footer {
   position: absolute;
-  bottom: 0;
+  bottom: 5px;
   width: 100%;
 }
 
@@ -487,12 +487,11 @@ p.features-desc {
   display: flex;
   align-items: center;
   margin-top: 8px;
-  margin-bottom: -4px;
-  padding-left: 6px;
 }
 
 .footer-contacts {
-  padding-left: 120px;
+  padding-left: 124px;
+  padding-top: 14px;
 }
 
 .footer-contacts p {
@@ -514,11 +513,11 @@ p.features-desc {
   display: flex;
   align-items: center;
   padding-left: 57px;
-  padding-top: 8px;
+  padding-top: 9px;
 }
 
 .footer-copyright span {
-  padding-top: 16px;
+  padding-top: 20px;
 }
 
 .footer-copyright a {
@@ -533,19 +532,18 @@ p.features-desc {
   display: flex;
   flex-wrap: wrap;
   margin: 0;
-  padding-top: 22px;
-  padding-left: 122px;
+  padding-top: 28px;
+  padding-left: 120px;
 }
 
 .social-button {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 48px;
-  height: 48px;
+  width: 49px;
+  height: 47px;
   background-color: var(--basic-seagull);
-  margin-right: 4px;
-  margin-bottom: 5px;
+  margin-right: 3px;
 }
 
 .social-button:hover,
