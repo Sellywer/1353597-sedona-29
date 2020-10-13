@@ -311,7 +311,8 @@
   position: relative;
   display: flex;
   justify-content: left;
-  margin-left: 20px;--basic-seagull
+  margin-left: 20px; 
+  background-color: var(--basic-seagull);
   border: none;
   height: 38px;
   color: var(--basic-black);
