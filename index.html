@@ -5,7 +5,6 @@
     <title>HTML Academy: Седона</title>
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/style1.css" />
   </head>
   <body class="page-body">
     <div class="page-wrapper">
@@ -153,32 +152,32 @@
                 <div class="date">
                   <label for="arrival-on">Дата заезда:</label>
                   <div class="search-date search-date-on">
-                    <input class="date-input" id="arrival-on" type="text" name="date" value="24 апреля 2017">
-                    <button class="button-calendar" type="submit"></button>
+                    <input class="date- input" id="arrival-on" type="text" name="date-on" value="24 апреля 2017">
+                    <button class="button-calendar" name="calendar" type="submit" aria-label="calendar"></button>
                   </div>
                 </div>
                 <div class="date">
                   <label for="arrival-off">Дата выезда:</label>
                   <div class="search-date search-date-off">
-                    <input class="date-input" id="arrival-off" type="text" name="date" value="4 июля 2017">
-                    <button class="button-calendar" type="submit"></button>
+                    <input class="date-input" id="arrival-off" type="text" name="date-of" value="4 июля 2017">
+                    <button class="button-calendar" name="calendar" type="submit" aria-label="calendar"></button>
                   </div>
                 </div>
                 <div class="number-of-persons ">
                 <div class="number-of-persons-item">
                   <label for="amount-of-people">Взрослые:</label>
                   <div class="button-amount">
-                    <button class="button-plus" type="submit"></button>
-                    <button class="button-minus" type="submit"></button>
-                    <input type="text" id="amount-of-people" name="amount" value="2">
+                    <button class="button-plus" name="plus" type="submit" aria-label="plus"></button>
+                    <button class="button-minus" name="minus" type="submit" aria-label="minus"></button>
+                    <input type="text" id="amount-of-people" name="amount-of-people" value="2">
                   </div> 
                 </div>
                 <div class="number-of-persons-item">
                   <label for="amount-of-child">Дети:</label>
                   <div class="button-amount-of-child">
-                    <button class="button-plus" type="submit"></button>
-                    <button class="button-minus" type="submit"></button>
-                    <input type="text" id="amount-of-child" name="amount" value="0">
+                    <button class="button-plus" name="plus" type="submit" aria-label="plus"></button>
+                    <button class="button-minus" name="minus" type="submit" aria-label="minus"></button>
+                    <input type="text" id="amount-of-child" name="amount-of-child value="0">
                   </div>
                 </div>
               </div>
@@ -291,5 +290,6 @@
         </div>
       </footer>
     </div>
+    <script src="js/search.js"></script>
   </body>
 </html>
