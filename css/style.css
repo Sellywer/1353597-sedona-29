@@ -1051,6 +1051,11 @@ a .caption-hotel:active {
   color: var(--basic-black);
 }
 
+.filter-button:active {
+  background-color: transparent;
+  color: var(--basic-white);
+}
+
 /* Seach */
 
 .search-field {
