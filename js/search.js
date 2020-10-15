@@ -13,13 +13,11 @@ searchSedona.addEventListener("click", function() {
 
 
 
-//form.addEventListener("submit", function () {
-  //  evt.preventDefault(); 
-    //localStorage.setItem("amount", amount.value);
-    
+form.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  localStorage.setItem("amountPeople", amountPeople.value);
+  localStorage.setItem("amountChild", amountChild.value);
+  console.log(amountPeople.value);
+  console.log(amountChild.value);
+});
 
-    //});
-
-
-
- 

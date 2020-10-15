@@ -455,6 +455,9 @@ p.features-desc {
 
 .map {
   display: block;
+  background-image: url("../img/map.jpg");
+  width: 1199px;
+  height: 594px;
 }
 
 .map iframe {
@@ -1128,7 +1131,7 @@ a .caption-hotel:active {
   position: relative;
   display: flex;
   justify-content: left;
-  margin-left: 20px; 
+  margin-left: 20px;
   background-color: var(--basic-seagull);
   border: none;
   height: 38px;
@@ -1208,16 +1211,30 @@ a .caption-hotel:active {
   color: var(--basic-light-white);
 }
 
-@keyframes bounce {
-  0% {transform: translate(-290px, -395px);
-  opacity: 0;};
-  100% { transform: translateY(395px);
-  opacity: 1;}
+@keyframes open {
+  0% {
+    transform: translate(-50%, -55%);
+    opacity: 0;
   }
+  25% {
+    transform: translate(-50%, -25%);
+    opacity: 0.25;
+  }
+  50% {
+    transform: translate(-50%, -15%);
+    opacity: 1;
+  }
+  75% {
+    transform: translate(-50%, -5%);
+  }
+  100% {
+    transform: translate(-50%, 0%);
+  }
+}
 
-
-  .search-field {
-  animation-name: bounce;
-  animation-duration: 6s;
+.search-field {
+  animation-name: open;
+  animation-duration: 1s;
   animation-fill-mode: forwards;
-  } 
+  animation-timing-function: linear;
+}
