@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 2 version,not dead,not ie <= 11
+*/
+
 /* Fonts */
 
 @font-face {
@@ -90,6 +97,7 @@ img {
   box-shadow: 0px 5px 15px var(--special-black-russian-shadow);
   min-height: 100%;
   display: grid;
+  grid-template-rows: -webkit-min-content 1fr -webkit-min-content;
   grid-template-rows: min-content 1fr min-content;
   align-content: start;
   position: relative;
@@ -101,12 +109,7 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.container-header {
-  width: 1054px;
-  margin: 0 auto;
-  position: relative;
+  padding: 15px 72px;
 }
 
 .header-logo {
@@ -122,9 +125,9 @@ img {
 .main-navigation {
   font-size: 14px;
   line-height: 26px;
-  padding: 15px 0;
   color: var(--basic-black);
   text-transform: uppercase;
+  width: 100%;
 }
 
 .site-navigation {
@@ -231,7 +234,6 @@ img {
 
 p.features-desc {
   font-size: 14px;
-  line-height: 26px;
   color: var(--basic-night-rider);
   font-weight: 400;
   text-transform: uppercase;
@@ -276,7 +278,9 @@ p.features-desc {
 
 .city-pic {
   align-self: stretch;
+  -o-object-fit: cover;
   object-fit: cover;
+  -o-object-position: center;
   object-position: center;
 }
 
@@ -597,6 +601,7 @@ p.features-desc {
 
 .hotels {
   display: grid;
+  grid-template-rows: -webkit-min-content auto;
   grid-template-rows: min-content auto;
 }
 
@@ -653,6 +658,7 @@ p.features-desc {
 
 .result {
   display: grid;
+  grid-template-rows: -webkit-min-content auto;
   grid-template-rows: min-content auto;
 }
 
@@ -1194,6 +1200,7 @@ a .caption-hotel:active {
   background-image: url("../img/plus.svg");
   border: none;
   cursor: pointer;
+  background-repeat: no-repeat;
 }
 
 .button-minus {
@@ -1206,6 +1213,7 @@ a .caption-hotel:active {
   background-image: url("../img/minus.svg");
   border: none;
   cursor: pointer;
+  background-repeat: no-repeat;
 }
 
 .button-seach {
@@ -1224,6 +1232,27 @@ a .caption-hotel:active {
 .button-seach:active {
   background-color: var(--basic-shakespeare);
   color: var(--basic-light-white);
+}
+
+@-webkit-keyframes open {
+  0% {
+    transform: translate(-50%, -55%);
+    opacity: 0;
+  }
+  25% {
+    transform: translate(-50%, -25%);
+    opacity: 0.25;
+  }
+  50% {
+    transform: translate(-50%, -15%);
+    opacity: 1;
+  }
+  75% {
+    transform: translate(-50%, -5%);
+  }
+  100% {
+    transform: translate(-50%, 0%);
+  }
 }
 
 @keyframes open {
@@ -1248,8 +1277,12 @@ a .caption-hotel:active {
 }
 
 .search-field {
+  -webkit-animation-name: open;
   animation-name: open;
+  -webkit-animation-duration: 1s;
   animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
+  -webkit-animation-timing-function: linear;
   animation-timing-function: linear;
 }
