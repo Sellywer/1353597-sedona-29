@@ -226,7 +226,7 @@ img {
   line-height: 26px;
   text-transform: uppercase;
   text-align: center;
-  padding: 41px 305px 51px 305px;
+  padding: 43px 305px 51px 305px;
 }
 
 p.features-desc {
@@ -261,7 +261,7 @@ p.features-desc {
   font-weight: 400;
   font-size: 14px;
   line-height: 21px;
-  padding: 46px 45px 40px 45px;
+  padding: 49px 45px 40px 45px;
   text-transform: uppercase;
   text-align: center;
 }
@@ -357,7 +357,7 @@ p.features-desc {
 }
 
 .item-desc {
-  padding: 46px 71px 55px 71px;
+  padding: 50px 71px 55px 71px;
   background-color: var(--special-white-smoke);
 }
 
@@ -376,7 +376,7 @@ p.features-desc {
 .search-hotel {
   align-items: center;
   align-content: center;
-  padding-top: 55px;
+  padding-top: 58px;
 }
 
 .search-hotel h2,
@@ -400,7 +400,7 @@ p.features-desc {
   font-weight: 400;
   text-transform: uppercase;
   text-align: center;
-  margin-bottom: 42px;
+  margin-bottom: 46px;
 }
 
 /* Buttons*/
@@ -466,14 +466,6 @@ p.features-desc {
 
 /* Main footer */
 
-.main-footer {
-  position: absolute;
-  bottom: 5px;
-  width: 100%;
-}
-
-/* Contacts */
-
 .page-footer {
   padding-bottom: 36px;
   padding-top: 14px;
@@ -485,6 +477,16 @@ p.features-desc {
   color: var(--basic-black);
   background-color: var(--basic-extra-white);
 }
+
+.main-footer {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  padding-bottom: 38px;
+  padding-top: 10px;
+}
+
+/* Contacts */
 
 .phone {
   display: flex;
@@ -1071,7 +1073,7 @@ a .caption-hotel:active {
   line-height: 26px;
   font-weight: 700;
   box-shadow: 0px 7px 15px var(--special-black-russian-shadow);
-  padding: 25px 55px 55px 55px;
+  padding: 23px 55px 55px 55px;
 }
 
 .search-field-none {
@@ -1110,6 +1112,7 @@ a .caption-hotel:active {
   height: 23px;
   border: none;
   background-image: url("../img/calendar.svg");
+  cursor: pointer;
 }
 
 .number-of-persons-item {
@@ -1185,6 +1188,7 @@ a .caption-hotel:active {
   height: 11px;
   background-image: url("../img/plus.svg");
   border: none;
+  cursor: pointer;
 }
 
 .button-minus {
@@ -1196,6 +1200,7 @@ a .caption-hotel:active {
   height: 3px;
   background-image: url("../img/minus.svg");
   border: none;
+  cursor: pointer;
 }
 
 .button-seach {

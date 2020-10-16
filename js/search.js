@@ -12,7 +12,7 @@ searchSedona.addEventListener("click", function() {
 
 
 
-form.addEventListener("click", function (evt) {
+form.addEventListener("submit", function (evt) {
   evt.preventDefault();
   localStorage.setItem("amountPeople", amountPeople.value);
   localStorage.setItem("amountChild", amountChild.value);
