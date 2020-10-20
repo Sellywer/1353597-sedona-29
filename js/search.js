@@ -6,7 +6,7 @@ const amountChild = searchField.querySelector("[name=amount-of-child]");
 const form = searchField.querySelector("form"); 
 
 searchSedona.addEventListener("click", function() {
-  searchField.classList.toggle('search-field-none');
+  searchField.classList.toggle('active');
   dateOn.focus();
 });
 

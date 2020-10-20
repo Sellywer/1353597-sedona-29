@@ -1,10 +1,3 @@
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v7.0.29,
-* Autoprefixer: v9.7.6
-* Browsers: last 2 version,not dead,not ie <= 11
-*/
-
 /* Fonts */
 
 @font-face {
@@ -96,7 +89,6 @@ img {
   box-shadow: 0px 5px 15px var(--special-black-russian-shadow);
   min-height: 100%;
   display: grid;
-  grid-template-rows: -webkit-min-content 1fr -webkit-min-content;
   grid-template-rows: min-content 1fr min-content;
   align-content: start;
   position: relative;
@@ -423,7 +415,7 @@ p.features-desc {
   background-color: var(--special-roman-coffee);
   border: none;
   cursor: pointer;
-  padding: 31px 139px;
+  padding: 30px 139px;
   font-size: 21px;
   line-height: 26px;
 }
@@ -493,8 +485,8 @@ p.features-desc {
   position: absolute;
   bottom: 0px;
   width: 100%;
-  padding-bottom: 38px;
-  padding-top: 21px;
+  padding-bottom: 37px;
+  padding-top: 23px;
 }
 
 /* Contacts */
@@ -502,7 +494,7 @@ p.features-desc {
 .phone {
   display: flex;
   align-items: center;
-  margin-top: 9px;
+  margin-top: 8px;
 }
 
 .footer-contacts {
@@ -527,7 +519,7 @@ p.features-desc {
 .footer-copyright {
   display: flex;
   align-items: center;
-  padding-top: 10px;
+  padding-top: 12px;
 }
 
 .footer-copyright a {
@@ -549,9 +541,9 @@ p.features-desc {
   justify-content: center;
   align-items: center;
   width: 46px;
-  height: 47px;
+  height: 48px;
   background-color: var(--basic-seagull);
-  margin: 9px 3px 0 3px;
+  margin: 13px 3px 0 3px;
 }
 
 .social-button:hover,
@@ -600,7 +592,6 @@ p.features-desc {
 
 .hotels {
   display: grid;
-  grid-template-rows: -webkit-min-content auto;
   grid-template-rows: min-content auto;
 }
 
@@ -657,7 +648,6 @@ p.features-desc {
 
 .result {
   display: grid;
-  grid-template-rows: -webkit-min-content auto;
   grid-template-rows: min-content auto;
 }
 
@@ -707,6 +697,7 @@ p.features-desc {
 .result-item a {
   width: 11px;
   height: 10px;
+  margin-bottom: 15px;
 }
 
 .result-icon svg {
@@ -806,16 +797,16 @@ p.features-desc {
   margin-right: 0;
 }
 
-a .caption-hotel {
+.caption-hotel {
   margin: 0;
   padding: 0;
 }
 
-a .caption-hotel:hover {
+.caption-hotel:hover {
   color: var(--basic-seagull);
 }
 
-a .caption-hotel:active {
+.caption-hotel:active {
   color: var(--basic-light-black);
 }
 
@@ -1080,22 +1071,33 @@ a .caption-hotel:active {
 
 .search-field {
   position: absolute;
+  overflow: hidden;
   z-index: 0;
   transform: translateX(-50%);
   left: 50%;
-  background-color: var(--basic-white);
-  width: 458px;
   font-family: var(--font-main);
   text-transform: uppercase;
   font-size: 14px;
   line-height: 26px;
   font-weight: 700;
-  box-shadow: 0px 7px 15px var(--special-black-russian-shadow);
-  padding: 23px 55px 55px 55px;
+  pointer-events: none;
 }
 
-.search-field-none {
-  display: none;
+.search-field-wrapper {
+  background-color: var(--basic-white);
+  width: 458px;
+  padding: 25px 55px 55px 55px;
+  box-shadow: 0px 7px 15px var(--special-black-russian-shadow);
+  transition: transform 0.6s cubic-bezier(0.25, 0.52, 1, 0.62);
+  transform: translateY(-100%);
+}
+
+.search-field.active {
+  pointer-events: all;
+}
+
+.search-field.active .search-field-wrapper {
+  transform: translateY(0);
 }
 
 .search-date {
@@ -1112,7 +1114,7 @@ a .caption-hotel:active {
   font-size: 14px;
   line-height: 26px;
   font-weight: 700;
-  margin-top: 37px;
+  margin-top: 30px;
 }
 
 .date {
@@ -1126,7 +1128,7 @@ a .caption-hotel:active {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  right: 10px;
+  right: 8px;
   width: 21px;
   height: 23px;
   border: none;
@@ -1144,7 +1146,7 @@ a .caption-hotel:active {
 
 .number-of-persons-item {
   display: flex;
-  justify-content: space-between;
+  align-items: center;
 }
 
 .search-date-on {
@@ -1181,7 +1183,7 @@ a .caption-hotel:active {
 .search-date input {
   border: none;
   text-transform: uppercase;
-  padding-left: 14px;
+  padding-left: 13px;
   width: 330px;
   background-color: var(--special-white-smoke);
   font-weight: 700;
@@ -1191,9 +1193,10 @@ a .caption-hotel:active {
   border: none;
   text-transform: uppercase;
   font-weight: 700;
-  width: 110px;
+  width: 114px;
   text-align: center;
   background-color: var(--special-white-smoke);
+  padding: 12px 0;
 }
 
 .button-amount {
@@ -1203,20 +1206,22 @@ a .caption-hotel:active {
 
 .button-amount-of-child {
   position: relative;
-  margin-left: 30px;
+  margin-left: 27px;
 }
 
 .button-plus {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  right: 12px;
-  width: 11px;
-  height: 11px;
+  right: 5px;
   background-image: url("../img/plus.svg");
   border: none;
   cursor: pointer;
   background-repeat: no-repeat;
+  width: 28px;
+  height: 28px;
+  background-position: center;
+  padding: 0;
 }
 
 .button-plus:hover {
@@ -1231,13 +1236,15 @@ a .caption-hotel:active {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  left: 12px;
-  width: 12px;
-  height: 3px;
+  left: 5px;
   background-image: url("../img/minus.svg");
   border: none;
   cursor: pointer;
   background-repeat: no-repeat;
+  width: 28px;
+  height: 28px;
+  background-position: center;
+  padding: 0;
 }
 
 .button-minus:hover {
@@ -1251,10 +1258,12 @@ a .caption-hotel:active {
 .button-seach {
   display: block;
   width: 100%;
-  margin-top: 60px;
+  margin-top: 53px;
   margin-right: 0;
   background-color: var(--basic-seagull);
   padding: 16px 139px;
+  font-size: 21px;
+  line-height: 26px;
 }
 
 .button-seach:hover {
@@ -1264,42 +1273,4 @@ a .caption-hotel:active {
 .button-seach:active {
   background-color: var(--basic-shakespeare);
   color: var(--basic-light-white);
-}
-
-@-webkit-keyframes open {
-  0% {
-    transform: translate(-50%, -55%);
-    opacity: 0;
-  }
-  25% {
-    transform: translate(-50%, -25%);
-    opacity: 0.25;
-  }
-  50% {
-    transform: translate(-50%, -15%);
-    opacity: 1;
-  }
-  75% {
-    transform: translate(-50%, -5%);
-  }
-  100% {
-    transform: translate(-50%, 0%);
-  }
-}
-
-@keyframes open {
-  0% {
-  }
-  100% {
-  }
-}
-
-.search-field {
-  -webkit-animation-name: open;
-  animation-name: open;
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-  transform-origin: 50% 100%;
 }
