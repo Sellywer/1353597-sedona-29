@@ -34,6 +34,7 @@
   --basic-light-white: rgba(255, 255, 255, 0.3);
   --basic-grey: #888888;
   --special-dark-gray: #ababab;
+  --spesial-dark-gray-shadow: rgba(171, 171, 171, 0.3);
   --special-very-light-grey: #cacaca;
   --special-whisper: #e5e5e5;
   --special-roman-coffee: #766357;
@@ -261,13 +262,14 @@ p.features-desc {
   font-weight: 400;
   font-size: 14px;
   line-height: 21px;
-  padding: 49px 45px 40px 45px;
+  padding: 47px 45px 40px 45px;
   text-transform: uppercase;
   text-align: center;
 }
 
 .features-city h3 {
-  margin-bottom: 25px;
+  margin-bottom: 26px;
+  padding: 0 80px;
 }
 
 .features-city p {
@@ -301,7 +303,7 @@ p.features-desc {
 }
 
 .feature-item {
-  padding: 160px 73px 80px 73px;
+  padding: 160px 74px 80px 74px;
   text-align: center;
   text-transform: uppercase;
 }
@@ -311,7 +313,7 @@ p.features-desc {
 }
 
 .item-before p {
-  padding: 26px 0 0 0;
+  padding: 25px 0 0 0;
 }
 
 .housing h3::before {
@@ -359,7 +361,7 @@ p.features-desc {
 }
 
 .item-desc {
-  padding: 46px 71px 55px 71px;
+  padding: 47px 71px 55px 71px;
   background-color: var(--special-white-smoke);
 }
 
@@ -409,7 +411,7 @@ p.features-desc {
 
 .button {
   display: block;
-  margin: auto;
+  margin: 0 auto;
   font: inherit;
   text-transform: uppercase;
   color: var(--basic-white);
@@ -437,13 +439,13 @@ p.features-desc {
 
 .search-button {
   background-color: var(--basic-seagull);
-  margin-right: 5px;
 }
 
 .button-hotel .button {
   font-size: 14px;
   line-height: 21px;
   padding: 3px 17px 3px 16px;
+  margin-right: 5px;
 }
 
 .search-button:hover {
@@ -479,8 +481,8 @@ p.features-desc {
   background-color: var(--basic-extra-white);
   padding: 0 68px;
   box-sizing: border-box;
-  padding-bottom: 38px;
-  padding-top: 30px;
+  padding-bottom: 36px;
+  padding-top: 28px;
 }
 
 .main-footer {
@@ -754,6 +756,7 @@ p.features-desc {
   display: grid;
   justify-items: flex-start;
   margin-top: 8px;
+  max-width: 261px;
 }
 
 .hotel-info {
@@ -887,6 +890,11 @@ p.features-desc {
 
 .filter-input-checkbox:disabled + label::before {
   opacity: 0.3;
+  cursor: none;
+}
+
+.filter-input-checkbox:disabled + label {
+  cursor: none;
 }
 
 .filter-input-checkbox:checked + label:before {
@@ -970,8 +978,8 @@ p.features-desc {
 
 .range-controls {
   position: relative;
-  margin-top: 22px;
-  margin-bottom: 32px;
+  margin-top: 21px;
+  margin-bottom: 33px;
 }
 
 .range-controls .scale {
@@ -992,12 +1000,12 @@ p.features-desc {
   left: 0;
   top: 50%;
   transform: translateY(-50%);
-  width: 2px;
-  height: 2px;
+  width: 4px;
+  height: 4px;
   border: 8px solid var(--basic-white);
   background-color: var(--special-dark-gray);
   border-radius: 50%;
-  box-shadow: 0 2px 1px 0 var(--special-white-smoke);
+  box-shadow: 0 2px 0 0 var(--spesial-dark-gray-shadow);
   cursor: pointer;
 }
 
@@ -1006,7 +1014,7 @@ p.features-desc {
 }
 
 .range-controls .toggle-max {
-  left: 255px;
+  left: 253px;
 }
 
 .price-controls input {
