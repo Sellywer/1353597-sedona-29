@@ -457,6 +457,7 @@ p.features-desc {
 
 .map {
   display: block;
+  background-image: url("../img/map.jpg");
   background-color: var(--special-coffee);
   width: 1199px;
   height: 594px;
