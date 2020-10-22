@@ -1,5 +1,5 @@
 const searchField = document.querySelector(".search-field");
-const searchSedona = document.querySelector(".button-seach-sedona");
+const searchSedona = document.querySelector(".button-search-sedona");
 const dateOn = searchField.querySelector("[name=date-on]");
 const dateOff = searchField.querySelector("[name=date-off]");
 const amountPeople = searchField.querySelector("[name=amount-of-people]");
@@ -9,7 +9,6 @@ const form = searchField.querySelector("form");
 searchSedona.addEventListener("click", function () {
   searchField.classList.toggle("active");
   searchField.classList.remove("error");
-  dateOn.focus();
 });
 
 form.addEventListener("submit", function (evt) {

@@ -34,7 +34,7 @@
   --basic-light-white: rgba(255, 255, 255, 0.3);
   --basic-grey: #888888;
   --special-dark-gray: #ababab;
-  --spesial-dark-gray-shadow: rgba(171, 171, 171, 0.3);
+  --special-dark-gray-shadow: rgba(171, 171, 171, 0.3);
   --special-very-light-grey: #cacaca;
   --special-whisper: #e5e5e5;
   --special-roman-coffee: #766357;
@@ -160,7 +160,7 @@ img {
   justify-self: end;
 }
 
-.item-navigation-curret {
+.item-navigation-current {
   color: var(--special-roman-coffee);
   pointer-events: none;
 }
@@ -331,7 +331,7 @@ p.features-desc {
 }
 
 .food,
-.suveriners {
+.souvenirs {
   padding: 160px 59px 82px 59px;
 }
 
@@ -348,7 +348,7 @@ p.features-desc {
   background-position: 0 0;
 }
 
-.suveriners h3::before {
+.souvenirs h3::before {
   content: "";
   position: absolute;
   top: -104px;
@@ -356,7 +356,7 @@ p.features-desc {
   transform: translateX(-50%);
   width: 64px;
   height: 75px;
-  background-image: url("../img/suveriners.svg");
+  background-image: url("../img/souvenirs.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
 }
@@ -424,7 +424,7 @@ p.features-desc {
   line-height: 26px;
 }
 
-.button-seach-sedona {
+.button-search-sedona {
   position: relative;
   z-index: 1;
 }
@@ -605,12 +605,12 @@ p.features-desc {
   line-height: 26px;
   color: var(--basic-black);
   text-transform: uppercase;
-  text-align: center;
 }
 
 .sort {
   font-size: 12px;
   line-height: 18px;
+  font-weight: 400;
   margin-top: 11px;
   text-transform: uppercase;
   text-align: center;
@@ -620,6 +620,7 @@ p.features-desc {
   list-style: none;
   font-size: 12px;
   line-height: 18px;
+  font-weight: 400;
   padding: 0;
   margin: 0;
   text-transform: uppercase;
@@ -768,6 +769,7 @@ p.features-desc {
 .about-hotel {
   font-size: 14px;
   line-height: 21px;
+  font-weight: 400;
   color: var(--basic-night-rider);
   width: 110px;
   text-transform: uppercase;
@@ -1006,7 +1008,7 @@ p.features-desc {
   border: 8px solid var(--basic-white);
   background-color: var(--special-dark-gray);
   border-radius: 50%;
-  box-shadow: 0 2px 0 0 var(--spesial-dark-gray-shadow);
+  box-shadow: 0 2px 0 0 var(--special-dark-gray-shadow);
   cursor: pointer;
 }
 
@@ -1079,7 +1081,7 @@ p.features-desc {
   color: var(--basic-white);
 }
 
-/* Seach */
+/* Search */
 
 .search-field {
   position: absolute;
@@ -1226,6 +1228,16 @@ p.features-desc {
   font-weight: 700;
 }
 
+.search-date input:hover {
+  background-color: var(--special-whisper);
+}
+
+.search-date input:focus {
+  background-color: var(--basic-white);
+  border: 2px solid var(--special-whisper);
+  box-sizing: border-box;
+}
+
 .number-of-persons-item input {
   border: none;
   text-transform: uppercase;
@@ -1292,7 +1304,7 @@ p.features-desc {
   background-image: url("../img/minus-blue.svg");
 }
 
-.button-seach {
+.button-search {
   display: block;
   width: 100%;
   margin-top: 53px;
@@ -1303,11 +1315,11 @@ p.features-desc {
   line-height: 26px;
 }
 
-.button-seach:hover {
+.button-search:hover {
   background-color: var(--basic-light-shakespeare);
 }
 
-.button-seach:active {
+.button-search:active {
   background-color: var(--basic-shakespeare);
   color: var(--basic-light-white);
 }
