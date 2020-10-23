@@ -190,6 +190,16 @@ img {
   height: 509px;
 }
 
+.main-pic-sedona::before {
+  content: url("../img/shape.svg");
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0%;
+  width: 1200px;
+  height: 57px;
+}
+
 .main-pic-sedona img {
   width: 457px;
   height: 351px;
