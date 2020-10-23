@@ -735,7 +735,7 @@ p.features-desc {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  padding: 21px 73px 22px 73px;
+  padding: 21px 69px 22px 73px;
   border-top: 1px solid var(--special-whisper);
 }
 
@@ -758,7 +758,7 @@ p.features-desc {
   display: grid;
   justify-items: flex-start;
   margin-top: 8px;
-  max-width: 261px;
+  max-width: 645px;
 }
 
 .hotel-info {
@@ -780,30 +780,38 @@ p.features-desc {
   text-align: right;
 }
 
-.star-list {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+.star-block {
+  position: relative;
   margin: 13px 0 48px 75px;
   padding: 0;
-}
-
-.star-item {
-  list-style: none;
-  width: 17px;
+  width: 114px;
   height: 17px;
-  background-image: url("../img/star.svg");
-  background-repeat: no-repeat;
-  margin-right: 7px;
-  display: none;
 }
 
-.star-item-active {
-  display: block;
+.star-block::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 114px;
+  height: 17px;
+  background-image: url("../img/star-icon.svg");
 }
 
-.star-item:last-child {
-  margin-right: 0;
+.star-block--for-star::before {
+  width: 80%;
+}
+
+.star-block--three-star::before {
+  width: 60%;
+}
+
+.star-block--two-star::before {
+  width: 40%;
+}
+
+.star-block--one-star::before {
+  width: 20%;
 }
 
 .caption-hotel {
@@ -824,12 +832,13 @@ p.features-desc {
   padding: 6px 13px;
   background-color: var(--special-white-smoke);
   margin: 0;
+  margin-right: 4px;
 }
 
 .button-hotel {
   display: flex;
   align-items: center;
-  width: 100%;
+  text-align: center;
 }
 
 /* Filters*/
