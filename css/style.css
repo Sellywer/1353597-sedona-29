@@ -1185,6 +1185,7 @@ p.features-desc {
   border: none;
   background-image: url("../img/calendar.svg");
   cursor: pointer;
+  outline: none;
 }
 
 .button-calendar:hover {
@@ -1246,8 +1247,8 @@ p.features-desc {
 
 .search-date input:focus {
   background-color: var(--basic-white);
-  border: 2px solid var(--special-whisper);
-  box-sizing: border-box;
+  box-shadow: 0 0 0 2px var(--special-whisper);
+  outline: none;
 }
 
 .number-of-persons-item input {
@@ -1258,6 +1259,7 @@ p.features-desc {
   text-align: center;
   background-color: var(--special-white-smoke);
   padding: 12px 0;
+  outline: none;
 }
 
 .button-amount {
@@ -1268,6 +1270,16 @@ p.features-desc {
 .button-amount-of-child {
   position: relative;
   margin-left: 27px;
+}
+
+.number-of-persons-item input:hover {
+  background-color: var(--special-whisper);
+}
+
+.number-of-persons-item input:focus {
+  background-color: var(--basic-white);
+  box-shadow: 0 0 0 2px var(--special-whisper);
+  outline: none;
 }
 
 .button-plus {
@@ -1283,6 +1295,7 @@ p.features-desc {
   height: 28px;
   background-position: center;
   padding: 0;
+  outline: none;
 }
 
 .button-plus:hover {
@@ -1306,6 +1319,7 @@ p.features-desc {
   height: 28px;
   background-position: center;
   padding: 0;
+  outline: none;
 }
 
 .button-minus:hover {
