@@ -1185,7 +1185,6 @@ p.features-desc {
   border: none;
   background-image: url("../img/calendar.svg");
   cursor: pointer;
-  outline: none;
 }
 
 .button-calendar:hover {
@@ -1295,7 +1294,6 @@ p.features-desc {
   height: 28px;
   background-position: center;
   padding: 0;
-  outline: none;
 }
 
 .button-plus:hover {
@@ -1319,7 +1317,6 @@ p.features-desc {
   height: 28px;
   background-position: center;
   padding: 0;
-  outline: none;
 }
 
 .button-minus:hover {
